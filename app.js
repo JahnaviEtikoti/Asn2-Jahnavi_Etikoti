@@ -12,8 +12,9 @@ const path = require("path");
 const { engine } = require("express-handlebars");
 const { query, validationResult } = require("express-validator");
 const port = process.env.PORT || 3000;
-const app = express();
 const { get } = require("http");
+
+const app = express();
 
 // -------------------- VIEW ENGINE SETUP --------------------
 app.engine(
