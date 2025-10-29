@@ -51,7 +51,7 @@ async function loadData() {
   const base =
     "https://cdn.jsdelivr.net/gh/JahnaviEtikoti/Asn2-Jahnavi_Etikoti-JSON/";
   const indexUrl = base + "index.json";
-  const index = (await fetch(indexUrl)).json();
+  const index = await (await fetch(indexUrl)).json();
 
   const parts = await Promise.all(
     index.parts.map((file) => fetch(base + file).then((res) => res.json()))
