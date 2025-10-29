@@ -7,12 +7,14 @@
  * * Student ID: N01687105
  * * Date: 2025-10-29
  * * ********************************************************************************/
-const express = require("express");
-const path = require("path");
-const { engine } = require("express-handlebars");
-const { query, validationResult } = require("express-validator");
-const port = process.env.PORT || 3000;
-const { get } = require("http");
+// Importing required modules
+const express = require("express"); // Express framework
+const path = require("path"); // For handling file paths
+const fs = require("fs"); // For file system operations
+const { engine } = require("express-handlebars"); // Handlebars view engine
+const { body, query, validationResult } = require("express-validator"); // For input validation
+const port = process.env.port || 3000; // Setting the port
+const { get } = require("http"); // For fetching data
 
 const app = express();
 
@@ -52,12 +54,16 @@ async function loadData() {
   const base =
     "https://cdn.jsdelivr.net/gh/JahnaviEtikoti/Asn2-Jahnavi_Etikoti-JSON/";
   const indexUrl = base + "index.json";
+
+  // Fetch index file
   const index = await (await fetch(indexUrl)).json();
 
+  // Load all part files in parallel
   const parts = await Promise.all(
-    index.parts.map((file) => fetch(base + file).then((res) => res.json()))
+    index.parts.map((file) => fetch(base + file).then((r) => r.json()))
   );
 
+  // Merge all arrays into one dataset
   return parts.flat();
 }
 
