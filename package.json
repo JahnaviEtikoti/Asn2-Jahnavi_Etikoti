@@ -13,5 +13,15 @@
     "express": "^5.1.0",
     "express-handlebars": "^8.0.3",
     "express-validator": "^7.3.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JahnaviEtikoti/Asn2-Jahnavi_Etikoti.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/JahnaviEtikoti/Asn2-Jahnavi_Etikoti/issues"
+  },
+  "homepage": "https://github.com/JahnaviEtikoti/Asn2-Jahnavi_Etikoti#readme"
 }

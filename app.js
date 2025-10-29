@@ -13,7 +13,7 @@ const { engine } = require("express-handlebars");
 const { query, validationResult } = require("express-validator");
 const port = process.env.PORT || 3000;
 const app = express();
-const { get } = require("node-fetch");
+const { get } = require("http");
 
 // -------------------- VIEW ENGINE SETUP --------------------
 app.engine(
