@@ -1,0 +1,20 @@
+<section>
+  <h2>All Airbnb Properties</h2>
+  {{#each properties}}
+    <div class="property-card">
+      <h3>{{this.NAME}}</h3>
+      <p><strong>ID:</strong> {{this.id}}</p>
+      <p><strong>Country:</strong> {{this.country}}</p>
+      <p><strong>Price:</strong> ${{this.price}}</p>
+      <p><strong>Neighbourhood:</strong> {{this.neighbourhood}}</p>
+
+      {{#if this.thumbnail}}
+        <img
+          src="{{this.thumbnail}}"
+          alt="Property Image"
+          width="200"
+          style="border-radius:8px; margin-top:10px;"
+        />
+      {{/if}}
+    </div>
+  {{/each}}

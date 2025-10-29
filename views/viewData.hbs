@@ -1,0 +1,44 @@
+<h2>All Airbnb Properties</h2>
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Room Type</th>
+      <th>Price</th>
+      <th>Service Fee</th>
+      <th>Neighbourhood</th>
+      <th>Country Code</th>
+      <th>Reviews</th>
+      <th>Thumbnail</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each properties}}
+      <tr>
+        <td>{{id}}</td>
+        <td>{{name}}</td>
+        <td>{{country}}</td>
+        <td>{{this.[room type]}}</td>
+        <td>${{price}}</td>
+        <td>${{serviceFee this.[service fee]}}</td>
+        <td>{{neighbourhood}}</td>
+        <td>{{this.[country code]}}</td>
+        <td>{{this.[number of reviews]}}</td>
+        <td>
+          {{#if thumbnail}}
+            <img
+              src="{{thumbnail}}"
+              alt="Property Image"
+              width="100"
+              style="border-radius:8px;"
+            />
+          {{/if}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+

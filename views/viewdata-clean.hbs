@@ -1,0 +1,39 @@
+<h2>{{title}}</h2>
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Room Type</th>
+      <th>Price</th>
+      <th>Service Fee</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each properties}}
+      <tr style ="{{highlight this.[service fee]}}">
+        <td>{{id}}</td>
+        <td>{{NAME}}</td>
+        <td>{{country}}</td>
+        <td>{{this.[room type]}}</td>
+        <td>${{price}}</td>
+        <td>${{serviceFee this.[service fee]}}</td>
+        <td>
+          {{#if thumbnail}}
+            <img
+              src="{{thumbnail}}"
+              alt="Property Image"
+              width="100"
+              style="border-radius:8px;"
+            />
+      {{/if}}
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+

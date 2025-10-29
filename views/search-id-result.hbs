@@ -1,0 +1,15 @@
+<h2>Property Found</h2>
+<p><strong>Property ID:</strong> {{property.id}}</p>
+<p><strong>Name:</strong> {{property.NAME}}</p>
+<p><strong>Country:</strong> {{property.country}}</p>
+<p><strong>Price:</strong> ${{property.price}}</p>
+<p><strong>Neighbourhood:</strong> {{property.neighbourhood}}</p>
+
+{{#if property.thumbnail}}
+  <img
+    src="{{property.thumbnail}}"
+    alt="Property Image"
+    width="300"
+    style="border-radius:8px; margin-top:10px;"
+  />
+{{/if}}

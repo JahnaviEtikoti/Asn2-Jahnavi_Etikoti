@@ -1,0 +1,23 @@
+<h2>Results for "{{searchQuery}}"</h2>
+
+{{#each results}}
+  <div class="property-card">
+    <p><strong>ID:</strong> {{id}}</p>
+    <p><strong>Name:</strong> {{NAME}}</p>
+    <p><strong>Country:</strong> {{country}}</p>
+    <p><strong>Room:</strong> {{this.[room type]}}</p>
+    <p><strong>Price:</strong> ${{price}}</p>
+    <p><strong>Neighbourhood:</strong> {{neighbourhood}}</p>
+    <p><strong>Country Code:</strong> {{this.[country code]}}</p>
+    <p><strong>No. of Reviews:</strong> {{this.[number of reviews]}}</p>
+    {{#if thumbnail}}
+      <img
+        src="{{thumbnail}}"
+        alt="Property Image"
+        width="300"
+        style="border-radius:8px; margin-top:10px;"
+      />
+    {{/if}}
+    <hr />
+  </div>
+{{/each}}
