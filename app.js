@@ -51,8 +51,7 @@ let airbnb = [];
 
 // -------------------- LOAD DATA --------------------
 async function loadData() {
-  const base =
-    "https://cdn.jsdelivr.net/gh/JahnaviEtikoti/Asn2-Jahnavi_Etikoti-JSON/";
+  const base = "https://cdn.jsdelivr.net/gh/JahnaviEtikoti/airbnbjson/";
   const indexUrl = base + "index.json";
 
   // Fetch index file
